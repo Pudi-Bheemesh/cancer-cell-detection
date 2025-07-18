@@ -1,0 +1,3 @@
+conda activate tensorflow
+conda activate tf
+python test.py

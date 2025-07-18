@@ -1,0 +1,106 @@
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ input_1 (InputLayer)        [(None, 128, 128, 3)]     0
+
+ conv2d (Conv2D)             (None, 128, 128, 6)       24
+
+ batch_normalization (BatchN  (None, 128, 128, 6)      24
+ ormalization)
+
+ leaky_re_lu (LeakyReLU)     (None, 128, 128, 6)       0
+
+ max_pooling2d (MaxPooling2D  (None, 64, 64, 6)        0
+ )
+
+ conv2d_1 (Conv2D)           (None, 64, 64, 16)        2416
+
+ batch_normalization_1 (Batc  (None, 64, 64, 16)       64
+ hNormalization)
+
+ leaky_re_lu_1 (LeakyReLU)   (None, 64, 64, 16)        0
+
+ max_pooling2d_1 (MaxPooling  (None, 32, 32, 16)       0
+ 2D)
+
+ conv2d_2 (Conv2D)           (None, 32, 32, 64)        25664
+
+ batch_normalization_2 (Batc  (None, 32, 32, 64)       256
+ hNormalization)
+
+ leaky_re_lu_2 (LeakyReLU)   (None, 32, 32, 64)        0
+
+ max_pooling2d_2 (MaxPooling  (None, 16, 16, 64)       0
+ 2D)
+
+ conv2d_3 (Conv2D)           (None, 16, 16, 128)       204928
+
+ batch_normalization_3 (Batc  (None, 16, 16, 128)      512
+ hNormalization)
+
+ leaky_re_lu_3 (LeakyReLU)   (None, 16, 16, 128)       0
+
+ max_pooling2d_3 (MaxPooling  (None, 8, 8, 128)        0
+ 2D)
+
+ conv2d_4 (Conv2D)           (None, 8, 8, 512)         1049088
+
+ batch_normalization_4 (Batc  (None, 8, 8, 512)        2048
+ hNormalization)
+
+ leaky_re_lu_4 (LeakyReLU)   (None, 8, 8, 512)         0
+
+ dropout (Dropout)           (None, 8, 8, 512)         0
+
+ flatten (Flatten)           (None, 32768)             0
+
+ dense (Dense)               (None, 4)                 131076
+
+=================================================================
+Total params: 1,416,100
+Trainable params: 1,414,648
+Non-trainable params: 1,452
+_________________________________________________________________
+{'EOSINOPHIL': 0, 'LYMPHOCYTE': 1, 'MONOCYTE': 2, 'NEUTROPHIL': 3}
+
+Epoch 1/20
+156/156 [==============================] - 126s 806ms/step - loss: 2.8059 - accuracy: 0.3892 - val_loss: 7.0234 - val_accuracy: 0.0845
+Epoch 2/20
+156/156 [==============================] - 90s 579ms/step - loss: 1.7819 - accuracy: 0.5492 - val_loss: 18.6257 - val_accuracy: 0.1408
+Epoch 3/20
+156/156 [==============================] - 49s 316ms/step - loss: 1.0411 - accuracy: 0.6429 - val_loss: 17.9144 - val_accuracy: 0.0986
+Epoch 4/20
+156/156 [==============================] - 50s 319ms/step - loss: 0.7713 - accuracy: 0.7127 - val_loss: 1.2551 - val_accuracy: 0.5070
+Epoch 5/20
+156/156 [==============================] - 50s 322ms/step - loss: 0.5490 - accuracy: 0.7826 - val_loss: 0.5587 - val_accuracy: 0.8310
+Epoch 6/20
+156/156 [==============================] - 50s 323ms/step - loss: 0.4884 - accuracy: 0.8147 - val_loss: 0.5918 - val_accuracy: 0.7606
+Epoch 7/20
+156/156 [==============================] - 51s 324ms/step - loss: 0.4581 - accuracy: 0.8380 - val_loss: 0.8182 - val_accuracy: 0.7465
+Epoch 8/20
+156/156 [==============================] - 51s 324ms/step - loss: 0.4462 - accuracy: 0.8371 - val_loss: 2.9487 - val_accuracy: 0.3521
+Epoch 9/20
+156/156 [==============================] - 52s 330ms/step - loss: 0.3491 - accuracy: 0.8714 - val_loss: 0.8923 - val_accuracy: 0.8028
+Epoch 10/20
+156/156 [==============================] - 76s 487ms/step - loss: 0.3856 - accuracy: 0.8692 - val_loss: 0.5850 - val_accuracy: 0.8028
+Epoch 11/20
+156/156 [==============================] - 53s 339ms/step - loss: 0.2540 - accuracy: 0.9012 - val_loss: 1.1662 - val_accuracy: 0.7183
+Epoch 12/20
+156/156 [==============================] - 50s 321ms/step - loss: 0.2044 - accuracy: 0.9218 - val_loss: 0.4983 - val_accuracy: 0.7465
+Epoch 13/20
+156/156 [==============================] - 51s 323ms/step - loss: 0.2048 - accuracy: 0.9197 - val_loss: 0.7773 - val_accuracy: 0.8169
+Epoch 14/20
+156/156 [==============================] - 51s 328ms/step - loss: 0.2257 - accuracy: 0.9194 - val_loss: 0.6269 - val_accuracy: 0.8028
+Epoch 15/20
+156/156 [==============================] - 51s 325ms/step - loss: 0.1775 - accuracy: 0.9338 - val_loss: 1.1233 - val_accuracy: 0.7324
+Epoch 16/20
+156/156 [==============================] - 51s 328ms/step - loss: 0.2106 - accuracy: 0.9295 - val_loss: 0.9890 - val_accuracy: 0.8169
+Epoch 17/20
+156/156 [==============================] - 51s 328ms/step - loss: 0.1701 - accuracy: 0.9395 - val_loss: 0.8551 - val_accuracy: 0.8028
+Epoch 18/20
+156/156 [==============================] - 51s 328ms/step - loss: 0.1591 - accuracy: 0.9410 - val_loss: 1.2923 - val_accuracy: 0.6901
+Epoch 19/20
+156/156 [==============================] - 51s 329ms/step - loss: 0.1325 - accuracy: 0.9525 - val_loss: 1.1653 - val_accuracy: 0.7465
+Epoch 20/20
+156/156 [==============================] - 52s 330ms/step - loss: 0.1278 - accuracy: 0.9548 - val_loss: 1.4386 - val_accuracy: 0.8592
